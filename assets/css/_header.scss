@@ -6,11 +6,11 @@
     margin-top: 0.4rem;
     overflow: hidden;
     user-select: none;
-    color: $font-color; // makes the divider white-ish
+    color: $font-color; 
   }
 
   &-inner {
-    display: flex;
+    display: flex;  
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
@@ -18,12 +18,30 @@
 
   &-logo {
     font-size: 2.2rem;
-    color: $font-color; // Make sure logo is visible too
+    color: $font-color; 
 
     @media (max-width: $small-screen) {
       font-size: 1.8rem;
     }
   }
+
+  .theme-toggle {
+  background: none;
+  border: 1px solid $primary-color-dark;
+  color: $primary-color-dark;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: $primary-color-dark;
+    color: #000;
+  }
+}
+
 
   &-nav {
     display: flex;
@@ -34,8 +52,8 @@
     }
 
     a {
-      color: $primary-color;     // bright orange
-      opacity: 1;                // fully visible
+      color: $primary-color; 
+      opacity: 1;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
