@@ -1,9 +1,20 @@
+$background-light: #ffffff;
+$font-light: #000000;
+$primary-color-light: #ff7f00;
+
+$background-dark: #000000;
+$font-dark: #ffffff;
+$primary-color-dark: #ff7f00;
+
+
 html, body {
   font-family: $body-font;
   font-size: 16px;
   line-height: 1.5;
   background-color: $background-color;
   color: $font-color;
+
+  transition: background-color 0.4s ease, color 0.4s ease;
 
   @media (max-width: $large-screen) {
     font-size: 14px;
@@ -18,19 +29,39 @@ html, body {
   }
 }
 
+
+body {
+  background-color: $background-light;
+  color: $font-light;
+}
+
+a {
+  color: $primary-color-light;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: lighten($primary-color-light, 10%);
+  }
+}
+
+body.dark-mode {
+  background-color: $background-dark;
+  color: $font-dark;
+}
+
+body.dark-mode a {
+  color: $primary-color-dark;
+
+  &:hover {
+    color: lighten($primary-color-dark, 10%);
+  }
+}
+
 .Site {
   max-width: 880px;
   margin: 0 auto;
   padding: 2rem;
-}
-
-a {
-  color: $primary-color;
-  text-decoration: none;
-
-  &:hover {
-    color: rgba($primary-color, 0.8);
-  }
 }
 
 p {
